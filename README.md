@@ -1,1 +1,1 @@
-# Queueing-theory-simulations
+# Queueing theory simulations
