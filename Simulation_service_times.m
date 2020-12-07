@@ -3,18 +3,18 @@
 % h=6. We also change r to get diffenet plots
 
 
-k=20;
+k=300;
 p=0.1;
-r=9;
+r=3;
 
-N=1:10;
+N=1:6;
 
-h2=1;
-[a_exe2,d2]=simulate(k,p,r,h2,N);
-fig=plot(N,a_exe2,':r.','MarkerIndices',1:length(N),'MarkerSize', 15)
-hold on   
-errorbar(N,a_exe2,d2,':r','HandleVisibility','off')
-axis([0 10 -1 60])
+% h2=1;
+% [a_exe2,d2]=simulate(k,p,r,h2,N);
+% fig=plot(N,a_exe2,':r.','MarkerIndices',1:length(N),'MarkerSize', 15)
+% hold on   
+% errorbar(N,a_exe2,d2,':r','HandleVisibility','off')
+% axis([0 10 -1 60])
 
 
 h=3;
@@ -23,14 +23,14 @@ plot(N,a_exe,':b.','MarkerIndices',1:length(N),'MarkerSize', 15)
 errorbar(N,a_exe,d,':b','HandleVisibility','off')
 
 
-h1=6;
-[a_exe1,d1]=simulate(k,p,r,h1,N);
-plot(N(2:end),a_exe1(2:end),':g.','MarkerIndices',1:length(N)-1,'MarkerSize', 15)    
-errorbar(N(2:end),a_exe1(2:end),d1(2:end),':g','HandleVisibility','off')
-hold off
+% h1=6;
+% [a_exe1,d1]=simulate(k,p,r,h1,N);
+% plot(N(2:end),a_exe1(2:end),':g.','MarkerIndices',1:length(N)-1,'MarkerSize', 15)    
+% errorbar(N(2:end),a_exe1(2:end),d1(2:end),':g','HandleVisibility','off')
+% hold off
 
-legend('Average service time 1 min', 'Average service time 3 min',...
-    'Average service time 6 min')
+% legend('Average service time 1 min', 'Average service time 3 min',...
+%     'Average service time 6 min')
 
 title('\lambda_{99%}, 20 developers in a team')
 xlabel('Number of environments') 
