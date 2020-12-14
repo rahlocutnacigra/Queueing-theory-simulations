@@ -131,7 +131,36 @@ I have simulated this situation. There are 200 developers who share the servers,
 
 \subsection{Q3: How does the way the tests are engineered affect the development process?}
 How does the way the tests are engineered affect the development process in terms of waiting times, in terms of cost units for infrastructure, in terms of cost units for people waiting?
+\newline \textbf{Answer:} I calculated the cost per day and the cost per month in units U, where $k$, $p$, $r$ and $w$ are the same as in question 1, required GoS is $ 95 \%$ and $h$ is between 1 and 15. The cost per hour for a server is 0.15 U and the cost per hour for a developer is 10 U. The results are shown in Figure \ref{costs_day} and Figure \ref{costs_month}.
 
+\begin{figure}[h!]
+\hbox{\hspace{-2cm} \includegraphics[scale=0.5]{plots/costs.png}}
+\caption{Costs per day}
+\label{costs_day}
+\end{figure} 
+
+\begin{figure}[h!]
+\hbox{\hspace{-2cm}\includegraphics[scale=0.5]{plots/costs_month.png}}
+\caption{Costs per month (20 work days)}
+\label{costs_month}
+\end{figure} 
+
+ We can see that the cost of developers waiting for the tests to be completed is much higher than the cost of acquiring an additional server. I wanted to get rid of peaks in the total cost curve, and for that reason I have tried to calculate the cost for GoS of $98\%$. 
+
+\begin{figure}[h!]
+\hbox{\hspace{-2cm} \includegraphics[scale=0.5]{plots/costs98.png}}
+\caption{Costs per day, GoS = $98 \%$}
+\label{costs98_day}
+\end{figure} 
+
+\begin{figure}[h!]
+\hbox{\hspace{-2cm}\includegraphics[scale=0.5]{plots/costs98_month.png}}
+\caption{Costs per month (20 work days), GoS = $98 \%$}
+\label{costs98_month}
+\end{figure} 
+
+From Figures \ref{costs98_month} and \ref{costs98_day} we see that changing the GoS (and adding another server) lowers the overall cost, which is not surprising since the time developers spend waiting for test results is much more expensive than hiring another server. 
+We can also see that the average testing time plays a key role in the cost. With an average testing time of 15 minutes, the monthly costs are more than three times higher than with an average testing time of 1 minute.
 
 \subsection{Optimization dimensions:}
 \begin{itemize}

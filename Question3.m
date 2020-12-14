@@ -1,6 +1,6 @@
 ex = 0.15; % expences for a server per hour
 wex = 10; % expences for developer per hour
-Gos = 0.95; %required grade of service
+Gos = 0.98; %required grade of service
 
 k=20;
 p=0.1;
