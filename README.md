@@ -9,3 +9,5 @@ simulate.m : function that simulates queueing process for different numbers of s
 Simulation_service_times.m : script, that plots average execution times for different numbers of servers and different mean service times
 
 Simulation_team_sizes.m : script, that plots average execution times for different numbers of servers and different team sizes
+
+The answers to some questions are in Answers.pdf
